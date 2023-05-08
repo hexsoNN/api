@@ -14,7 +14,7 @@ prod:
 	docker-compose -f docker-compose-prod.yml up -d
 
 test:
-	docker-compose -f docker-compose-test.yml run --rm server coverage run -m pytest
+	docker-compose -f docker-compose-test.yml run --rm server coverage run -m pytest -vv
 
 coverage:
 	docker-compose -f docker-compose-test.yml run --rm server coverage report
